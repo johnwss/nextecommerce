@@ -4,8 +4,8 @@ import { ProductType} from "./types/ProductType";
 
 type CartState = {
     cart: ProductType[],
-    // addToCart:(product: ProductType) => void;
-    // removeFromCart:(productId: string) => void;
+    addProduct:(product: ProductType) => void;
+    removeProduct:(productId: string) => void;
     isOpen: boolean,
     toggleCart: () => void;
 }
@@ -13,6 +13,8 @@ type CartState = {
 export const useCartStore = create<CartState>()(
     persist((set) => ({
      cart:[],
+     addProduct:(product) =>
+     set((state))
      isOpen: false,
      toggleCart: () => set((state) => ({isOpen: !state.isOpen})),   
     }), {name: 'cart-storage'})
