@@ -37,13 +37,16 @@ export default async function ProductPage({params:{id}}:ProductPageProps){
             <ProductImage product={product}/>
             <div className="flex flex-col">
             <div className="pb-4">
-            <h1 className="text-2xl font-bold">{product.name}</h1>
-            <h2 className="text-xl text-teal-600 font-bold">{formatPrice(product.price)}</h2>
+             <h1 className="text-2xl font-bold text-gray-300">{product.name}</h1>
+             <h2 className="text-xl text-teal-600 font-bold">
+             {formatPrice(product.price)}
+             </h2>
             </div>               
             <div className="pb-4">
-                <p className="text-sm">{product.description}</p>
+                <p className="text-sm text-gray-400">{product.description}</p>
             </div>
             <AddCart product={product}/>
+
     </div>
         </div>
         
